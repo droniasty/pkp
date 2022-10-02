@@ -1,0 +1,16 @@
+private boolean search(int[] numbers, int x){
+		int last = numbers.length - 1;
+		int first = 0;
+		while(first < last) {
+			int middle = (first + last)/2;
+			if (numbers[middle] < x) {
+				first = middle + 1;
+			}
+			else {
+				last = middle;
+			}
+		}
+		return (numbers[last] == x);
+	}
+//zlozonosc pamieciowa: O(1)
+//zlozonosc czasowa: O(log(n)) 
